@@ -4,7 +4,7 @@ maintainer_email 'svanzee@caringbridge.org'
 license          'All rights reserved'
 description      'Installs/Configures role-sphinx'
 long_description 'Installs/Configures role-sphinx'
-version          '0.1.0'
+version          '0.1.1'
 
 depends 'sphinx'
 depends 'yum-epel'
