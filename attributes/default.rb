@@ -10,3 +10,4 @@ default[:sphinx][:group] = 'root'
 default[:sphinx][:use_mysql]      = false
 default[:sphinx][:use_percona]    = false
 default[:sphinx][:use_postgres]   = false
+default[:sphinx][:config_file] = '/var/www/platform/config/sphinx.conf'

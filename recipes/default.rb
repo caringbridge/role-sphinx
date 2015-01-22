@@ -10,3 +10,13 @@
 include_recipe 'sphinx::rpm'
 include_recipe 'yum'
 include_recipe 'yum-epel'
+
+template '/etc/init.d/searchd' do
+  source 'searchd_init.erb'
+  owner 'root'
+  group 'root'
+  variables(
+  :config_file => node[:sphinx][:config_file]
+  )
+  action :create
+end
