@@ -20,3 +20,7 @@ template '/etc/init.d/searchd' do
   )
   action :create
 end
+
+service 'searchd' do
+  action :start
+end
