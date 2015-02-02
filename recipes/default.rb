@@ -22,5 +22,5 @@ template '/etc/init.d/searchd' do
 end
 
 service 'searchd' do
-  action :start
+  action [:enable, :start]
 end
