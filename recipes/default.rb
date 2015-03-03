@@ -26,7 +26,7 @@ end
 # without this the build will fail to start searchd because none of this is setup.
 execute 'Setup SPHINX.CONF and Index paths' do
   command 'env APPLICATION_ENV=vagrant-cluster /var/www/platform/scripts/cb search rotate'
-  not_if
+  not_if 'ps -ef | grep -v grep | grep searchd'
 end
 
 service 'searchd' do
