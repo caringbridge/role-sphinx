@@ -25,7 +25,7 @@ end
 # and it will also build out the paths for the index files that sphix uses.
 # without this the build will fail to start searchd because none of this is setup.
 execute 'Setup SPHINX.CONF and Index paths' do
-  command 'env APPLICATION_ENV=vagrant-cluster /var/www/platform/scripts/cb search rotate'
+  command 'env APPLICATION_ENV=vagrant-cluster /var/www/platform/scripts/cb search reindex'
   not_if 'ps -ef | grep -v grep | grep searchd'
 end
 
